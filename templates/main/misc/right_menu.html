@@ -1,0 +1,27 @@
+<div id="rightMenu">
+    <div id="rightDiggit" clickflg="false" onclick="votePost(16471674,'Digg')">
+        <span class="rightMenuSpan rightDiggitSpan" style="display: none; opacity: 0.9;">0</span>
+        <i class="iconfont icon-zan1" style="transform: rotate(0deg); transform-origin: 50% 50%;"></i>
+    </div>
+    <div id="rightBuryit" clickflg="false" onclick="votePost(16471674,'Bury')">
+        <span class="rightMenuSpan rightBuryitSpan" style="display: none; opacity: 0.9;">0</span>
+        <i class="iconfont icon-buzan" style="transform: rotate(0deg); transform-origin: 50% 50%;"></i>
+    </div>
+    <div id="attention" clickflg="true">
+        <span class="rightMenuSpan attentionSpan" style="display: none; opacity: 0.9;">已关注</span>
+        <i class="iconfont icon-dianzan1" style="transform: rotate(0deg); transform-origin: 50% 50%;"></i>
+    </div>
+    <div id="toUpDown" data="down">
+        <span class="rightMenuSpan toUpDownSpan" style="display: none; opacity: 0.9;">跳至底部</span>
+        <div id="toUpDownI" style="transform: rotate(-180deg); transform-origin: 50% 50%;">
+            <i class="iconfont icon-zhiding"></i>
+        </div>
+    </div>
+</div>
+<script>
+    $('#toUpDown').on('click', function(event){
+        var top = document.body.scrollTop || document.documentElement.scrollTop
+        scrollBy(0,-top);
+        console.log("鼠标移动12")
+        });
+</script>
