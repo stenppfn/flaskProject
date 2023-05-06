@@ -6,7 +6,7 @@ COMMON: &common #标识
   DEFAULT_PAGE_SIZE: 10
 
   # 数据库连接
-  SQLALCHEMY_DATABASE_URI: 'mysql+pymysql://root:123123@localhost:3306/test?charset=utf8mb4'
+  SQLALCHEMY_DATABASE_URI: 'mysql+pymysql://root:123123@localhost:3306/testrestful?charset=utf8mb4'
   SQLALCHEMY_TRACK_MODIFICATIONS: False
   # 日志配置文件路径
   LOGGING_CONFIG_PATH: ./config/logging.yaml
@@ -35,12 +35,12 @@ COMMON: &common #标识
   SCHEDULER_API_ENABLED: True
   JOBS:
     - id: my_job
-      func: app.task.task:my_job
+      func: application.task.task:my_job
       trigger: cron
       hour: 12
       minute: 0
     - id: db_query
-      func: app.task.task:db_query
+      func: application.task.task:db_query
       trigger: cron
       hour: 12
       minute: 10
